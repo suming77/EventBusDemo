@@ -1,4 +1,4 @@
-package com.sum.eventbusdemo;
+package com.sum.eventbusdemo.normal;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,13 +6,20 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.sum.eventbusdemo.MessageEvent;
+import com.sum.eventbusdemo.R;
+
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+/**
+ * 注册并接收普通事件
+ */
 public class OneActivity extends AppCompatActivity implements View.OnClickListener {
+    private static final String TAG = "OneActivity";
     private TextView mTv_content, mTv_content2;
 
     @Override
@@ -23,11 +30,11 @@ public class OneActivity extends AppCompatActivity implements View.OnClickListen
         findViewById(R.id.btn_skip).setOnClickListener(this);
         mTv_content = findViewById(R.id.tv_content);
         mTv_content2 = findViewById(R.id.tv_content2);
-        //注册事件
+        //1.注册事件
         EventBus.getDefault().register(this);
     }
 
-    //接收TwoActivity事件处理,无tag
+    //3.接收TwoActivity事件处理
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onMessageEvent(MessageEvent message) {
         //TODO 接收事件后Do something
@@ -35,11 +42,11 @@ public class OneActivity extends AppCompatActivity implements View.OnClickListen
         Toast.makeText(this, "onMessageEvent:" + message.name, Toast.LENGTH_SHORT).show();
     }
 
-    //接收ThreeActivity事件处理,有tag
+    //接收OtherActivity事件处理
     @Subscribe(threadMode = ThreadMode.MAIN)
-    public void onMessageEventFromOtherActivity(MessageEvent message) {
-        Toast.makeText(this, "onMessageEventFromOtherActivity:" + message.name, Toast.LENGTH_SHORT).show();
-        mTv_content2.setText("onMessageEventFromOtherActivity:" + message.name);
+    public void onMessageEventFromOtherActivity(String s) {
+        Toast.makeText(this, "onMessageEventFromOtherActivity:" + s, Toast.LENGTH_SHORT).show();
+        mTv_content2.setText("onMessageEventFromOtherActivity:" + s);
     }
 
     @Override
@@ -56,7 +63,7 @@ public class OneActivity extends AppCompatActivity implements View.OnClickListen
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        //反注册事件
+        //2.反注册事件
         EventBus.getDefault().unregister(this);
     }
 }

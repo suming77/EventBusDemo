@@ -15,22 +15,79 @@
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
         android:text="EventBus-普通使用"
+        android:textAllCaps="false"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btn_stick"
+        android:id="@+id/btn_sticky"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:background="#5169EF"
         android:paddingLeft="10dp"
-        android:textAllCaps="false"
         android:paddingRight="10dp"
-        android:text="AndroidEventBus"
+        android:text="sticky粘性事件"
+        android:textAllCaps="false"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btn_normal" />
 
+    <Button
+        android:id="@+id/btn_thread_mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#E91E63"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="几种线程模式"
+        android:textAllCaps="false"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_sticky" />
+
+    <Button
+        android:id="@+id/btn_priority"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#9C27B0"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="事件的优先级"
+        android:textAllCaps="false"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_thread_mode" />
+
+    <Button
+        android:id="@+id/btn_android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#673AB7"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="AndroidEventBus"
+        android:textAllCaps="false"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_priority" />
+
+    <Button
+        android:id="@+id/btn_android_sticky"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#3F51B5"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="AndroidEventBus粘性事件"
+        android:textAllCaps="false"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_android" />
+    <!--#2196F3-->
 </androidx.constraintlayout.widget.ConstraintLayout>

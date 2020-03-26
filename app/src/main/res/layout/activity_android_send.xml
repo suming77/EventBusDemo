@@ -29,7 +29,7 @@
         android:background="#2196F3"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
-        android:text="发送事件"
+        android:text="发布事件"
         android:textAllCaps="false"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"

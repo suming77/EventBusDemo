@@ -13,7 +13,7 @@
         android:background="@color/colorPrimary"
         android:gravity="center_vertical"
         android:paddingLeft="10dp"
-        android:text="TwoActivity"
+        android:text="ModeSendActivity"
         android:textAllCaps="false"
         android:textColor="#ffffff"
         android:textSize="18sp"

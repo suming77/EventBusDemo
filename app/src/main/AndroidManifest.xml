@@ -16,11 +16,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".OneActivity"/>
-        <activity android:name=".TwoActivity"/>
-        <activity android:name=".ThreeActivity"/>
-        <activity android:name=".AndroidBusSendActivity"/>
-        <activity android:name=".AndroidEventBusReceiveActivity"/>
+        <activity android:name=".normal.OneActivity"/>
+        <activity android:name=".normal.TwoActivity"/>
+        <activity android:name=".sticky.StickySendActivity"/>
+        <activity android:name=".sticky.StickyReceiveActivity"/>
+        <activity android:name=".androidbus.AndroidBusSendActivity"/>
+        <activity android:name=".androidbus.AndroidBusReceiveActivity"/>
+        <activity android:name=".priority.PrioritySendActivity"/>
+        <activity android:name=".priority.PriorityReceiveActivity"/>
+        <activity android:name=".threadmode.ModeSendActivity"/>
+        <activity android:name=".threadmode.ModeReceiveActivity"/>
+        <activity android:name=".androidsticky.AndroidStickySendActivity"/>
+        <activity android:name=".androidsticky.AndroidStickyReceiveActivity"/>
     </application>
 
 </manifest>
